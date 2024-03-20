@@ -43,7 +43,7 @@ const Chat = () => {
         alert(error);
       }
     });
-  }, [ENDPOINT, location.search]);
+  });
 
   useEffect(() => {
     socket.on("message", (message) => {
