@@ -9,7 +9,7 @@ import TextContainer from "../TextContainer/TextContainer.js";
 import "./Chat.css";
 import { useLocation } from "react-router";
 
-const ENDPOINT = "https://group-chat-client.vercel.app/"
+const ENDPOINT = "https://group-chat-server-theta.vercel.app/"
 
 // const ENDPOINT = "http://localhost:5000";
 
