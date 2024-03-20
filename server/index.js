@@ -15,8 +15,9 @@ const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
     origin: "https://group-chat-client.vercel.app",
-    methods: ["GET"],
+    methods: ["GET", "POST"],
   },
+  transports: ["websockets"],
 });
 
 
