@@ -30,7 +30,7 @@ const Chat = () => {
         origin: "https://group-chat-server-theta.vercel.app",
         credentials: true,
       },
-      transports: ["websocket"],
+      // transports: ["websocket"],
     });
 
     setRoom(room);
