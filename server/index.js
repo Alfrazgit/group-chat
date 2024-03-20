@@ -1,25 +1,18 @@
 const http = require("http");
 const express = require("express");
-const { Server } = require("socket.io");
+const socketio = require("socket.io");
 const cors = require("cors");
 
 const { addUser, removeUser, getUser, getUsersInRoom } = require("./users");
 
 const router = require("./router");
 
-app.use(cors());
-app.use(router);
-
 const app = express();
 const server = http.createServer(app);
-const io = new Server(server, {
-  cors: {
-    origin: "https://group-chat-client.vercel.app",
-    methods: ["GET", "POST"],
-  },
-  transports: ["websockets"],
-});
+const io = socketio(server);
 
+app.use(cors());
+app.use(router);
 
 io.on("connect", (socket) => {
   socket.on("join", ({ name, room }, callback) => {
