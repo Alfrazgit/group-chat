@@ -27,7 +27,7 @@ const Chat = () => {
 
     socket = io(ENDPOINT, {
       cors: {
-        origin: "https://group-chat-server-theta.vercel.app",
+        origin: ENDPOINT,
         credentials: true,
       },
       transports: ["websocket"],
