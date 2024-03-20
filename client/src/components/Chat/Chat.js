@@ -9,7 +9,7 @@ import TextContainer from "../TextContainer/TextContainer.js";
 import "./Chat.css";
 import { useLocation } from "react-router";
 
-const ENDPOINT = "http://localhost:5000/";
+const ENDPOINT = "https://group-chat-server-theta.vercel.app/";
 
 let socket;
 
@@ -67,14 +67,14 @@ const Chat = () => {
     <div className="outerContainer">
       <div className="container">
         <InfoBar room={room} />
-        <Messages messages={messages} name={name}/>
+        <Messages messages={messages} name={name} />
         <Input
           message={message}
           setMessage={setMessage}
           sendMessage={sendMessage}
         />
       </div>
-      <TextContainer users={users}/>
+      <TextContainer users={users} />
     </div>
   );
 };
