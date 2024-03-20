@@ -27,7 +27,7 @@ const Chat = () => {
 
     socket = io(ENDPOINT, {
       cors: {
-        origin: "http://localhost:5000",
+        origin: ENDPOINT,
         credentials: true,
       },
       transports: ["websocket"],
