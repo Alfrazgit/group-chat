@@ -27,7 +27,7 @@ const Chat = () => {
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
 
-    socket = io(ENDPOINT, {
+    socket = io(process.env.ENDPOINT || 'https://group-chat-server-theta.vercel.app/', {
       cors: {
         origin: ENDPOINT,
         credentials: true,
